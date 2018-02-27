@@ -17,7 +17,8 @@ for %%x in (%bit%) do (
 )
 cd %HOMEPATH%
 echo.
-:cmd
+:reset
+set "cmd="
 set /p "cmd=%cd%>"
 %cmd%
 echo.
@@ -34,4 +35,4 @@ for %%x in (%bit%) do (
         color %%x%%y
     )
 )
-goto cmd
+goto reset
